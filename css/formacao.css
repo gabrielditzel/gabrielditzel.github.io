@@ -1,0 +1,151 @@
+.formacao-bg {
+  background-color: var(--cor-13);
+}
+
+.formacao {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+.formacao::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url('../img/detalhe.svg') no-repeat center;
+}
+
+.formacao .titulo {
+  max-width: 5ch;
+}
+
+.formacao .texto {
+  color: var(--cor-6);
+}
+
+.formacao .texto strong {
+  color: var(--cor-0);
+}
+
+.faculdade-lista {
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.faculdade {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor-14);
+  border: 1px solid var(--cor-15);
+  border-radius: 5px;
+}
+
+.faculdade-tipo {
+  margin-bottom: 10px;
+  font: 400 0.875rem/1.4 'Fira Sans', sans-serif;
+  text-transform: uppercase;
+  color: var(--cor-6);
+}
+
+.faculdade-curso {
+  margin-bottom: 50px;
+  position: relative;
+  font: 700 1.125rem/1.4 'Fira Sans', sans-serif;
+  color: var(--cor-0);
+}
+
+.faculdade-curso::before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: var(--gradiente);
+}
+
+.faculdade-instituicao {
+  font: 400 1.125rem/1.1 'Fira Sans', sans-serif;
+  color: var(--cor-6);
+}
+
+.cursos {
+  margin-bottom: 60px;
+}
+
+.formacao-extra h3 {
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font: 700 0.875rem/1.4 'Fira Sans', sans-serif;
+  text-transform: uppercase;
+  color: var(--cor-7);
+}
+
+.formacao-extra h3::before {
+  content: '';
+  position: absolute;
+  left: -36px;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.cursos h3::before {
+  background: url('../img/cursos.svg') no-repeat center;
+}
+
+.idiomas h3::before {
+  background: url('../img/idiomas.svg') no-repeat center;
+}
+
+.formacao-extra ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font: 400 1.125rem/1.1 'Fira Sans', sans-serif;
+  color: var(--cor-0);
+}
+
+.cursos li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formacao-extra span {
+  color: var(--cor-7);
+}
+
+@media (max-width: 800px) {
+  .formacao {
+    padding-top: 60px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .formacao .titulo {
+    max-width: initial;
+    color: var(--cor-0);
+  }
+
+  .formacao-extra h3 {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .formacao-extra h3::before {
+    position: initial;
+  }
+}
